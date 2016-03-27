@@ -1,0 +1,111 @@
+{%- extends "./layouts/main.html" -%}
+{%- set posts = [
+{
+	"title": "Приточно-вытяжные установки",
+	"text": "К бытовым приточно-вытяжным установкам с рекуперацией относятся агрегаты небольших производительностей и габаритов. Они эффективно справляются с задачами вентиляции и рекупера- ции тепла из вытяжного воздуха в приточный, имеют фильтры для очистки как приточного, так и удаляемого воздуха.",
+	"img": "post1.jpg"
+},
+{
+	"title": "Вентиляция дома из клееного бруса",
+	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
+	"img": "post2.jpg"
+},
+{
+	"title": "Зачем прятать систему вентиляции в интерьере? Так даже лучше!",
+	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
+	"img": "post3.jpg"
+},{
+	"title": "Приточно-вытяжные установки",
+	"text": "К бытовым приточно-вытяжным установкам с рекуперацией относятся агрегаты небольших производительностей и габаритов. Они эффективно справляются с задачами вентиляции и рекупера- ции тепла из вытяжного воздуха в приточный, имеют фильтры для очистки как приточного, так и удаляемого воздуха.",
+	"img": "post1.jpg"
+},
+{
+	"title": "Вентиляция дома из клееного бруса",
+	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
+	"img": "post2.jpg"
+},
+{
+	"title": "Зачем прятать систему вентиляции в интерьере? Так даже лучше!",
+	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
+	"img": "post3.jpg"
+}
+] -%}
+
+
+{%- block content -%}
+<div class="l-container">
+	<div class="c-posts__list">
+	{% for post in posts %}
+		<div class="c-posts__item">
+			<div class="c-posts">
+				<div class="c-posts__title">{{ post.title }}</div>
+				<img class="c-posts__img" src="/uploads/{{ post.img }}" alt="">
+				<div class="c-posts__text">{{ post.text|safe }}</div>
+			</div>
+		</div>
+	{% endfor %}
+	</div>
+	<a href="#" class="c-posts__loadmore">Загрузить еще</a>
+</div>
+{% include "components/map.html" %}
+
+
+ {%- endblock %}
+{%- block pageScripts %}
+	<script src="/javascripts/masonry.pkgd.min.js"></script>
+
+	<script>
+	$(function() {
+
+		var $grid = $('.c-posts__list');
+		
+
+		$grid.masonry({
+		  itemSelector: '.c-posts__item',
+		  columnWidth: 340,
+		  fitWidth: true,
+		  gutter: 0
+		});
+
+		function createPostView (data) {
+			var elem = document.createElement('div');
+			var img = new Image;
+			elem.className = 'c-posts__item';
+
+			var content = [
+				'<div class="c-posts"><div class="c-posts__title">' + data.title +'</div>'
+			];
+			if (data.img) {
+				img.src = '/uploads/' + data.img;
+				content.push('<img class="c-posts__img" src="' + img.src + '" />')
+			}
+			content.push('<div class="c-posts__text">' + data.text +'</div></div>');
+			elem.innerHTML = content.join("");
+			return elem
+		};
+
+		function loadMorePosts ()  {
+			$.getJSON('/uploads/posts.json', function(data) {
+				var $posts;
+				var posts = [];
+
+				$.each(data, function(indx, val) {
+					posts.push(createPostView (val))
+				});
+
+				$posts = $(posts);
+				$grid.append($posts).masonry('appended', $posts);
+			});
+		} 
+
+		$('.c-posts__loadmore').on('click', function(e) {
+			e.preventDefault();
+			loadMorePosts ()
+		})
+
+
+		
+	})
+	
+	</script>
+{% endblock -%}

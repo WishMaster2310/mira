@@ -698,6 +698,30 @@ a {
   border-bottom: 11px solid transparent;
   border-right: 8px solid transparent;
 }
+.c-posts {
+  border: 1px solid #dbdbdb;
+}
+.c-posts__list {
+  margin: 0 auto;
+}
+.c-posts__item {
+  display: inline-block;
+  vertical-align: top;
+  width: 340px;
+  margin-bottom: 20px;
+  padding: 0px 10px;
+}
+.c-posts__img {
+  width: 100%;
+}
+.c-posts__title {
+  padding: 10px;
+}
+.c-posts__text {
+  padding: 10px;
+  font-size: 16px;
+  line-height: 22px;
+}
 .c-btn {
   display: inline-block;
   vertical-align: middle;

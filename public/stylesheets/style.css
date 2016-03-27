@@ -704,6 +704,16 @@ a {
 .c-posts__list {
   margin: 0 auto;
 }
+.c-posts__imgbox {
+  position: relative;
+  overflow: hidden;
+  background-color: #bdbdbd;
+}
+.c-posts__imgbox::before {
+  padding-top: 62.5%;
+  content: "";
+  display: block;
+}
 .c-posts__item {
   display: inline-block;
   vertical-align: top;
@@ -712,7 +722,14 @@ a {
   padding: 0px 10px;
 }
 .c-posts__img {
-  width: 100%;
+  position: absolute;
+  min-width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 .c-posts__title {
   padding: 10px;

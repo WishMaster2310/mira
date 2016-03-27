@@ -1,0 +1,41 @@
+<section class="c-map__section">
+	<div class="c-map__back">
+		<div id="yamap"></div>
+	</div>
+	<div class="c-map__block">
+		<img class="c-map__logo" src="/images/map-logo.png" alt="">
+		<div class="c-map__brand">
+			Строительная компания <br> <strong>МИРА Строй</strong>
+		</div>
+		<div class="c-map__text">
+			620154, Екатеринбург, <br>Шевелева, 7, офис 21
+		</div>	
+		<a href="tel: +73433835135" class="c-header__tel u-mb30">8 (343) <b>38 35 135</b></a>
+		<a href="mailto: info@ck-mira.ru" class="c-header__email u-mb30"><i class="c-icon c-icon--envelop"></i>info@ck-mira.ru</a>
+		<a href="#" class="c-map__toggler">Написать сообщение</a>
+
+		<div class="c-map__form-wrapper">
+			<a href="#" class="c-map__form-close"><i class="c-icon c-icon--map-close"></i></a>
+			<form action="/" method="POST" class="c-map__form">
+				<div class="c-map__form-title">Написать сообщение</div>
+				<div class="c-map__form-row">
+					<input type="text" name="name" class="c-map__form-control" required placeholder="Пожалуйста представьтесь">
+				</div>
+				<div class="c-map__form-row">
+					<input type="text" name="contacts" class="c-map__form-control" required placeholder="Ваш Телефон / Email">
+				</div>
+				<div class="c-map__form-row">
+					<textarea name="msg" class="c-map__form-control c-map__form-area" placeholder="Ваше сообщение"></textarea>
+				</div>
+
+				<div class="c-map__form-row">
+					<div class="c-map__file">
+						<input id="mapFormFile" name="file" type="file">
+						<label for="mapFormFile"><i class="c-icon c-icon--file"></i>Приложить файл..</label>
+					</div>
+					<button type="submit" class="c-map__form-btn">Отправить</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>

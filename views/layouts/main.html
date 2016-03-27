@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="База отдыха которую вы искали">
+  <meta name="keywords" content="база отдыха, бани, аренда домиков Нижневартовск">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{{ ctx.company }}</title>
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="mira">
+  <meta property="og:url" content="Site URL" />
+  <meta property="og:title" content="{{ ctx.company }}" />
+  <meta property="og:description" content="{{ ctx.company }}" />
+
+  <link rel="stylesheet" href="{{ ctx.static_path }}/stylesheets/style.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="l-page {% if bodyClass %}{{ bodyClass }}{% endif %}">
+    {% include "../components/header.html" %}
+    {% block content %}{% endblock %}
+    {% include "../components/footer.html" %}
+    
+    <!-- assets -->
+    <script src="{{ ctx.static_path }}/javascripts/slick.min.js"></script>
+    <script src="{{ ctx.static_path }}/javascripts/general.js"></script>
+    {% block pageScripts %}{% endblock  %}
+  </div>
+</body>
+
+</html>

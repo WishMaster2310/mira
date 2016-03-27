@@ -1,0 +1,30 @@
+.fontSizer (@size: @base-font-size, @lineh: (@size + @size/5) , @unit: rem){
+	font-size: unit(@size, px); // ie 9
+	font-size: unit(round(unit(@size)/unit(@base-font-size), 3), @unit);
+	line-height: round(unit(@lineh/@size), 3);
+}
+
+
+.remMb(@size){
+	margin-bottom: unit(@size, px);
+	margin-bottom: unit(round(unit(@size)/unit(@base-font-size), 3), rem);
+}
+
+.remMt(@size){
+	margin-top: unit(@size, px);
+	margin-top: unit(round(unit(@size)/unit(@base-font-size), 3), rem);
+}
+
+.clearfix() {
+		&:before,
+		&:after {
+				content: " ";
+				display: table;
+				clear: both;
+		}
+}
+
+
+.noTap() {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

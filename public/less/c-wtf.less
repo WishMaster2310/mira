@@ -1,0 +1,134 @@
+.c-wtf {
+	&__top {
+		background: #1680B4 url(../images/wtf-top.jpg) center top;
+		color: #fff;
+		padding: 25px 0 24px 0;
+		position: relative;
+		z-index: 1;
+
+		&-container {
+			width: 1024px;
+			margin: 0 auto;
+		}
+
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 100%;
+			left: 100px;
+			border-top: 12px solid #1680B4;
+			border-left: 12px solid transparent;
+			border-right: 12px solid transparent;
+			
+		}
+
+		&-title {
+			margin-bottom: 10px;
+		}
+	}
+
+	&__menu {
+		margin-left: -13px;
+
+		&-item {
+			display: inline-block;
+			vertical-align: top;
+			white-space: nowrap;
+			color: #fff;
+			text-decoration: none;
+			font-size: 15px;
+			padding: 8px 12px;
+			line-height: 1;
+			letter-spacing: 0.020em;
+			margin-bottom: 10px;
+			border-radius: 15px;
+			
+
+			&--active {
+				color: @blue;
+				background-color: #fff;
+			}
+
+			&:hover {
+				color: @blue;
+				background-color: #fff;
+				box-shadow: 0 2px 3px 0 #1c6ea6;
+			}
+		}
+	}
+
+	&__slider {
+		background: #f5f6f9 url(../images/wtf-bg.jpg) no-repeat right bottom;
+
+		&-item {
+			
+			padding: 20px 0 20px 0px;
+		}
+	}
+
+	&__title {
+		.fontSizer(45);
+		font-family: @light-font-family;
+		margin-bottom: 10px;
+	}
+
+	&__info {
+		.fontSizer(18, 24);
+		font-style: italic;
+		margin-bottom: 10px;
+		color: #1a2426;
+	}
+
+	&__text {
+		.fontSizer(14, 20);
+		margin-bottom: 20px;
+		color: #1a2426;
+	}
+
+	&__row {
+		overflow: hidden;
+	}
+
+	&__content {
+		width: 600px;
+		height: 345px;
+		float: left;
+		overflow: hidden;
+		
+	}
+
+	&__more {
+		color: @blue;
+		.fontSizer(14);
+
+		&:hover {
+			text-decoration: none;
+			
+		}
+
+		&:after {
+			display: inline-block;
+			content: "";
+			vertical-align: top;
+			border-left: 3px solid transparent;
+			border-right: 3px solid @blue;
+			border-top: 3px solid @blue;
+			border-bottom: 3px solid transparent;
+			margin-top: 3px;
+		}
+	}
+
+	&__control {
+		text-align: right;
+		width: 1024 - 600px;
+		padding-top: 200px;
+		float: right;
+
+		.c-btn {
+			min-width: 200px;
+		}
+	}
+
+
+}

@@ -1,6 +1,11 @@
-$(function() {
-	
+function setMenuActiveState (indx) {
+	var items = document.querySelectorAll('.c-header__menu-item');
+	items[indx].className += ' c-header__menu-item--active';
+	return
+}
 
+
+$(function() {
 	$('.c-slider').slick({
 		dots: false,
 		nextArrow: '<div class="c-slider__arrow c-slider__arrow--next"></div>',

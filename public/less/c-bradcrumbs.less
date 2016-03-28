@@ -1,0 +1,33 @@
+.c-bradcrumbs {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+
+	&__item  {
+		display: inline-block;
+		vertical-align: top;
+		max-width: 200px;
+		overflow: hidden;
+		margin-bottom: 5px;
+		text-overflow: ellipsis;
+
+		&::after {
+			content: "—";
+			margin-left: .25em;
+			color: @blue;
+		}
+
+		&:last-child::after {
+			display: none;
+		}
+
+		a {
+			text-decoration: none;
+			color: @blue;
+
+			&:hover {
+				color: darken(@blue, 10%)
+			}
+		}
+	}
+}

@@ -4,6 +4,11 @@
 	background: url('../images/header-bg.png') no-repeat center top;
 	z-index: 1;
 	height: image-height('../images/header-bg.png');
+	margin-bottom: 45px;
+
+	&--main {
+		margin-bottom: 0;
+	}
 	
 	.l-container {
 		height: 100%;
@@ -61,9 +66,14 @@
 			margin-left: 45px;
 			position: relative;
 			font-family: @light-font-family;
+			border-bottom: 2px solid transparent;
 
 			&:hover {
 				color: darken(@blue, 10%);
+			}
+
+			&--active {
+				border-bottom-color: @blue;
 			}
 		}
 	}

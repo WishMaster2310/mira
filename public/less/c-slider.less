@@ -2,6 +2,7 @@
 	overflow: hidden;
 	margin-top: (image-height("../images/header-bg.png") - 20)* -1;
 	background-color: #1b6da5;
+	visibility: hidden;
 
 	&__item {
 		
@@ -11,6 +12,10 @@
 		height: 550px;
 		padding-top: image-height("../images/header-bg.png") + 20;
 		
+	}
+
+	&.slick-initialized {
+		visibility: visible;
 	}
 
 	.l-container {

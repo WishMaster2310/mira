@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <div class="l-page {% if bodyClass %}{{ bodyClass }}{% endif %}">
+  <div class="l-page {% if bodyClass %}l-page--{{ bodyClass }}{% endif %}">
     {% include "../components/header.html" %}
     {% block content %}{% endblock %}
     {% include "../components/footer.html" %}

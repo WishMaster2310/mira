@@ -10,4 +10,8 @@ router.get('/', function(req, res, next) {
 router.get('/articles', function(req, res, next) {
   res.render('articles', {});
 });
+
+router.get('/articles/:id', function(req, res, next) {
+  res.render('article_item', {});
+});
 module.exports = router;

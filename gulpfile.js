@@ -9,6 +9,7 @@ var prettify = require('gulp-html-prettify');
 var replace = require('gulp-replace');
 var spritesmith = require('gulp.spritesmith');
 var merge = require('merge-stream');
+var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 var siteDB = require('./datasource/sdata.json');
 var LessPluginAutoPrefix = require('less-plugin-autoprefix');
@@ -29,6 +30,12 @@ gulp.task('less:dev', function() {
     }))
     //.pipe(sourcemaps.write('.', {includeContent: false, mapSources: 'public/less/**'}))
     .pipe(gulp.dest('public/stylesheets/'));
+});
+
+gulp.task('scripts', function() {
+  return gulp.src('public/javascripts/lib/*.js')
+    .pipe(concat('libs.js'))
+    .pipe(gulp.dest('public/javascripts/'));
 });
 
 gulp.task('less:prod', function() {
@@ -80,6 +87,7 @@ gulp.task('default', function() {
   });
   gulp.watch(['public/images/__icons/*.png'], ['sprites', server.notify]);
   gulp.watch(['public/less/*.less', 'public/less/**/*.less'], ['less:dev', server.notify]);
+  gulp.watch(['public/javascripts/lib/*.js'], ['scripts', server.notify]);
 });
 
 

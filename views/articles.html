@@ -1,63 +1,96 @@
-
 {%- extends "./layouts/main.html" -%}
-{%- set posts = [
-{
-	"title": "Приточно-вытяжные установки",
-	"text": "К бытовым приточно-вытяжным установкам с рекуперацией относятся агрегаты небольших производительностей и габаритов. Они эффективно справляются с задачами вентиляции и рекупера- ции тепла из вытяжного воздуха в приточный, имеют фильтры для очистки как приточного, так и удаляемого воздуха.",
-	"img": "post1.jpg"
-},
-{
-	"title": "Вентиляция дома из клееного бруса",
-	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
-	"img": "post2.jpg"
-},
-{
-	"title": "Зачем прятать систему вентиляции в интерьере? Так даже лучше!",
-	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
-	"img": "post3.jpg"
-},{
-	"title": "Приточно-вытяжные установки",
-	"text": "К бытовым приточно-вытяжным установкам с рекуперацией относятся агрегаты небольших производительностей и габаритов. Они эффективно справляются с задачами вентиляции и рекупера- ции тепла из вытяжного воздуха в приточный, имеют фильтры для очистки как приточного, так и удаляемого воздуха.",
-	"img": "post1.jpg"
-},
-{
-	"title": "Вентиляция дома из клееного бруса",
-	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
-	"img": "post2.jpg"
-},
-{
-	"title": "Зачем прятать систему вентиляции в интерьере? Так даже лучше!",
-	"text": "Особенность домов из клееного бруса – это наличие естественной вентиляции, которая достигается благодаря особой структуре древесины. Естественная вентиляция обеспечивает приток свежего воздуха. Но одной естественной вентиляции недостаточно.",
-	"img": "post3.jpg"
-}
+{%- set gallery = [
+	{	
+		"cover": "media-cover1.jpg",
+		"title": "Эскизный и архитектурный проекты",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 12,
+		"videoCounter": 3
+	},
+	{	
+		"cover": "media-cover2.jpg",
+		"title": "Рабочее проектирование",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 15,
+		"videoCounter": 1
+	},
+	{	
+		"cover": "media-cover3.jpg",
+		"title": "Строительные работы",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 25,
+		"videoCounter": 3
+	},{	
+		"cover": "media-cover4.jpg",
+		"title": "Наружные сети",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 12,
+		"videoCounter": 1
+	},{	
+		"cover": "media-cover5.jpg",
+		"title": "Водоснабжение и&nbsp;канализация",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 12,
+		"videoCounter": 2
+	},{	
+		"cover": "media-cover6.jpg",
+		"title": "Отопление",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 15,
+		"videoCounter": 1
+	},{	
+		"cover": "media-cover7.jpg",
+		"title": "Вентилляция",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 25,
+		"videoCounter": 3
+	},{	
+		"cover": "media-cover8.jpg",
+		"title": "Электромонтажные работы",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 12,
+		"videoCounter": 1
+	},{	
+		"cover": "media-cover9.jpg",
+		"title": "Отделочные работы",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 12,
+		"videoCounter": 2
+	},{	
+		"cover": "media-cover10.jpg",
+		"title": "Благоустройство",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 15,
+		"videoCounter": 1
+	},{	
+		"cover": "media-cover11.jpg",
+		"title": "Реконструкция",
+		"galleryID": "11ff3245327ca142",
+		"imgCounter": 15,
+		"videoCounter": 1
+	}
 ] -%}
-
 {%- block content -%}
 <div class="l-inner">
-	<ul class="c-bradcrumbs">
-		<li class="c-bradcrumbs__item"><a href="/articles">Статьи о нашей работе</a></li>
-	</ul>
-	<h1 class="c-h2">Вентиляция</h1>
-	<div class="c-posts__list c-posts__list--ismosaic">
-	{%- for post in posts %}
-		<div class="c-posts__item">
-			<a class="c-posts" href="/articles/article_item">
-				<div class="c-posts__title">{{ post.title }}</div>
-				<div class="c-posts__imgbox">
-					<img class="c-posts__img" src="/uploads/{{ post.img }}" alt="">
+
+	<h1 class="c-h2">Статьи о нашей работе по направлениям услуг</h1>
+	<div class="c-media">
+	{%- for item in gallery %}
+		<a href="/articles/vent" class="c-media__item">
+			<div class="c-media__inner">
+				<div class="c-media__img">
+					<img src="/uploads/{{ item.cover }}" alt="">
 				</div>
-				<div class="c-posts__text">{{ post.text|safe }}</div>
-			</a>
-		</div>
+				<div class="c-media__meta">
+					<span>{{ item.imgCounter }} фото</span>&emsp;<span>{{ item.videoCounter }} видео</span>
+				</div>
+			</div>
+			<div class="c-media__title">{{ item.title|safe }}</div>
+		</a>
 	{% endfor -%}
-	</div>
-	<div class="c-posts__loadmore-container">
-		<a href="#" class="c-posts__loadmore">Загрузить еще</a>
 	</div>
 </div>
 {% include "components/calline.html" %}
 {% include "components/map.html" %}
 {%- endblock %}
-{%- block pageScripts %}
-	<script src="/javascripts/articles.js"></script>
-{% endblock -%}
+{%- block pageScripts %}{% endblock -%}

@@ -1,0 +1,15 @@
+{%- set items = [{"type": "img", "caption": "Очень короткий текстовый блок", "thumbs": "/uploads/thumbs1.jpg", "src": "/uploads/2540937.jpg"}, {"type": "img", "caption": "Вот так будет выглядеть длинный текст помещенный в этот блок, у текста появится троеточие", "thumbs": "/uploads/thumbs2.jpg", "src": "/uploads/img0025.jpg"}, {"type": "img", "caption": "3Очень короткий текстовый блок", "thumbs": "/uploads/thumbs3.jpg", "src": "/uploads/imageswewewewewewe.jpg"}, {"type": "img", "caption": "4Очень короткий текстовый блок", "thumbs": "/uploads/thumbs4.jpg", "src": "/uploads/Vnutrennyaya-otdelka-v-Penze.jpg"}, {"type": "img", "caption": "5Очень короткий текстовый блок", "thumbs": "/uploads/thumbs1.jpg", "src": "/uploads/05c87c79f8f89ed6f142ed5f53b63b38.jpg"}, {"type": "img", "caption": "6Очень короткий текстовый блок", "thumbs": "/uploads/thumbs2.jpg", "src": "/uploads/dc59aa_6b04d4cfc4ef4e41997a21473fe671d5.jpg"}, {"type": "img", "caption": "7Очень короткий текстовый блок", "thumbs": "/uploads/thumbs3.jpg", "src": "/uploads/images12132323.jpg"}, {"type": "img", "caption": "8Очень короткий текстовый блок", "thumbs": "/uploads/thumbs4.jpg", "src": "/uploads/images12132323.jpg"}, {"type": "video", "caption": "8Очень короткий текстовый блок", "thumbs": "/uploads/thumbs4.jpg", "src": "https://www.youtube.com/embed/jBEOSU-BvHQ"}] -%}
+{%- set galleryID = '11ff3245327ca142' -%}
+
+<div class="c-media-slider">
+	<div class="l-container">
+		<h2 class="c-h2">Галерея</h2>
+		<div class="c-media-slider__list">
+			{%- for item in items %}
+				<a href="#" data-gid="{{ galleryID }}" data-gactive="{{ loop.index -1 }}" class="c-media-slider__item c-media-slider__item--{{ item.type }}  j-gallery">
+					<img class="c-media-slider__img" src="{{ item.thumbs }}" alt="">
+				</a>
+			{%- endfor %}
+		</div>
+	</div>
+</div>

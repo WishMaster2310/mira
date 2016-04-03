@@ -1,99 +1,32 @@
 {%- extends "./layouts/main.html" -%}
 {%- set gallery = [
-	{	
-		"cover": "media-cover1.jpg",
-		"title": "Эскизный и архитектурный проекты",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 12,
-		"videoCounter": 3
-	},
-	{	
-		"cover": "media-cover2.jpg",
-		"title": "Рабочее проектирование",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 15,
-		"videoCounter": 1
-	},
-	{	
-		"cover": "media-cover3.jpg",
-		"title": "Строительные работы",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 25,
-		"videoCounter": 3
-	},{	
-		"cover": "media-cover4.jpg",
-		"title": "Наружные сети",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 12,
-		"videoCounter": 1
-	},{	
-		"cover": "media-cover5.jpg",
-		"title": "Водоснабжение и&nbsp;канализация",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 12,
-		"videoCounter": 2
-	},{	
-		"cover": "media-cover6.jpg",
-		"title": "Отопление",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 15,
-		"videoCounter": 1
-	},{	
-		"cover": "media-cover7.jpg",
-		"title": "Вентилляция",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 25,
-		"videoCounter": 3
-	},{	
-		"cover": "media-cover8.jpg",
-		"title": "Электромонтажные работы",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 12,
-		"videoCounter": 1
-	},{	
-		"cover": "media-cover9.jpg",
-		"title": "Отделочные работы",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 12,
-		"videoCounter": 2
-	},{	
-		"cover": "media-cover10.jpg",
-		"title": "Благоустройство",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 15,
-		"videoCounter": 1
-	},{	
-		"cover": "media-cover11.jpg",
-		"title": "Реконструкция",
-		"galleryID": "11ff3245327ca142",
-		"imgCounter": 15,
-		"videoCounter": 1
-	}
-] -%}
+	{"cover": "media-cover1.jpg", "title": "Эскизный и архитектурный проекты", "galleryID": "11ff3245327ca142", "imgCounter": 12, "videoCounter": 3 }, {"cover": "media-cover2.jpg", "title": "Рабочее проектирование", "galleryID": "11ff3245327ca142", "imgCounter": 15, "videoCounter": 1 }, {"cover": "media-cover3.jpg", "title": "Строительные работы", "galleryID": "11ff3245327ca142", "imgCounter": 25, "videoCounter": 3 },{"cover": "media-cover4.jpg", "title": "Наружные сети", "galleryID": "11ff3245327ca142", "imgCounter": 12, "videoCounter": 1 },{"cover": "media-cover5.jpg", "title": "Водоснабжение и&nbsp;канализация", "galleryID": "11ff3245327ca142", "imgCounter": 12, "videoCounter": 2 },{"cover": "media-cover6.jpg", "title": "Отопление", "galleryID": "11ff3245327ca142", "imgCounter": 15, "videoCounter": 1 },{"cover": "media-cover7.jpg", "title": "Вентилляция", "galleryID": "11ff3245327ca142", "imgCounter": 25, "videoCounter": 3 },{"cover": "media-cover8.jpg", "title": "Электромонтажные работы", "galleryID": "11ff3245327ca142", "imgCounter": 12, "videoCounter": 1 },{"cover": "media-cover9.jpg", "title": "Отделочные работы", "galleryID": "11ff3245327ca142", "imgCounter": 12, "videoCounter": 2 },{"cover": "media-cover10.jpg", "title": "Благоустройство", "galleryID": "11ff3245327ca142", "imgCounter": 15, "videoCounter": 1 },{"cover": "media-cover11.jpg", "title": "Реконструкция", "galleryID": "11ff3245327ca142", "imgCounter": 15, "videoCounter": 1 } ] -%} 
 {%- block content -%}
 <div class="l-inner">
 
 	<h1 class="c-h2">Медиа-галерея</h1>
 	<div class="c-media">
 	{%- for item in gallery %}
-		<a href="{{ item.galleryID }}" class="c-media__item j-gallery">
-			<div class="c-media__img">
-				<img src="/uploads/{{ item.cover }}" alt="">
+		<a href="#"  data-gid="{{ item.galleryID }}" class="c-media__item j-gallery">
+			<div class="c-media__inner">
+				<div class="c-media__img">
+					<img src="/uploads/{{ item.cover }}" alt="">
+				</div>
+				<div class="c-media__meta">
+					<span>{{ item.imgCounter }} фото</span>&emsp;<span>{{ item.videoCounter }} видео</span>
+				</div>
 			</div>
-			<div class="c-media__meta">
-				<span>{{ item.imgCounter }} фото</span>&emsp;<span>{{ item.videoCounter }} видео</span>
-			</div>
-			<div class="c-media__title">{{ item.title?safe }}</div>
+			<div class="c-media__title">{{ item.title|safe }}</div>
 		</a>
 	{% endfor -%}
+		<div class="c-media__item c-media__item--special">
+			<img src="/images/special.png" class="c-media__special-img" alt="">
+			<div class="c-media__special-title">Не нашли нужных  <br>изображений?</div>
+			<div class="c-media__special-text"><a href="mailto: info@ck-mira.ru">Напишите нам</a>, и мы пришлем<br> больше фотографий</div>
+		</div>
 	</div>
-</div>
-<div id="galleryPopup" class="js-ppp">
-	
 </div>
 {% include "components/calline.html" %}
 {% include "components/map.html" %}
 {%- endblock %}
-{%- block pageScripts %}
-	<script src="/javascripts/articles.js"></script>
-{% endblock -%}
+{%- block pageScripts %}{% endblock -%}

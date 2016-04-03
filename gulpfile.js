@@ -99,7 +99,8 @@ gulp.task('export', function() {
   
   gulp.src(['views/*.html', '!views/__*.html'])
     .pipe(nunjucksRender({
-      ctx: siteDB
+      'STATIC': '.'
+
     }))
     .pipe(prettify({
       indent_char: ' ',

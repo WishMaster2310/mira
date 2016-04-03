@@ -1,0 +1,51 @@
+{%- extends "./layouts/main.html" -%}
+{%- block content -%}
+<div class="l-container">
+	<div class="c-contacts">
+		<div class="c-contacts__col c-contacts__col--lg">
+			Строительная компания<br>
+			<div class="c-contacts__title">МИРА Строй</div>
+		</div>
+		<div class="c-contacts__col">
+			<strong>620151, Екатеринбург, <br>Шевелева 7,  офис 21</strong>
+		</div>
+		<div class="c-contacts__col c-contacts__col--sm">
+			<a href="#" class="c-file c-contacts__file">Типовой <br>договор</a>
+		</div>
+		<div class="c-contacts__col c-contacts__col--sm">
+			<a href="#" class="c-file c-file--pink c-contacts__file">Платежные<br> реквизиты</a>
+		</div>
+	</div>
+</div>
+{% include "components/map2.html" %}
+<section class="c-section">
+	<div class="l-container">
+		<div class="l-row">
+			<div class="l-col l-col--2of3">
+				<h2 class="c-h2">Платежные реквизиты</h2>
+				<p class="c-contacts-para">ООО «МИРА Строй» <br>
+					ИНН: 7842350200;<br>
+					КПП: 781001001;<br>
+					ОГРН: 1079847048170;<br>
+					196247, г. Екатеринбург, Шевелева, д. 7<br>
+					расчетный счет: 407 02 810 300 010 000 001 <br>
+					в  ЗАО «АльфаБанк», г. Екатеринбург<br>
+					БИК 044030850, <br>
+					кор. счет: 301 01 810 400 000 000 850,<br>
+				</p>
+			</div>
+			<div class="l-col l-col--1of3">
+				<h2 class="c-h2">Вакансии</h2>
+				<p class="c-contacts-para"><a href="/vacancy/1">Инженер-проектировщик</a></p>
+				<p class="c-contacts-para"><a href="/vacancy/2">Монтажник (2)</a></p>
+				<p class="c-contacts-para"><a href="/vacancy/3">Главный инженер</a></p>
+				<p class="c-contacts-para"><a href="/vacancy/4">Прораб на объекты малоэтажного строительства</a></p>
+			</div>
+
+
+		</div>
+		
+	</div>
+</section>
+{%- endblock %}
+{%- block pageScripts %}{% endblock -%}

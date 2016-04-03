@@ -3,15 +3,15 @@
     <div class="c-header__row">
       <div class="c-header__col c-header__col--logobox">
         <a href="/" class="c-header__logo">
-          <img src="{{ ctx.static_path }}/images/logo.png" alt="{{ ctx.company }}">
+          <img src="{{ STATIC }}/images/logo.png" alt="{{ ctx.company }}">
         </a>
       </div>
       <div class="c-header__col c-header__col--menu">
         <nav class="c-header__menu">
-          <a href="/offer" class="c-header__menu-item">Наши Услуги</a>
-          <a href="/media" class="c-header__menu-item">Галерея</a>
-          <a href="/articles" class="c-header__menu-item">Статьи</a>
-          <a href="/contacts" class="c-header__menu-item">Контакты</a>
+          <a href="/offer" class="c-header__menu-item {%- if ActiveMenu == 0 %} c-header__menu-item--active{% endif -%}">Наши Услуги</a>
+          <a href="/media" class="c-header__menu-item {%- if ActiveMenu == 1 %} c-header__menu-item--active{% endif -%}">Галерея</a>
+          <a href="/articles" class="c-header__menu-item {%- if ActiveMenu == 2 %} c-header__menu-item--active{% endif -%}">Статьи</a>
+          <a href="/contacts" class="c-header__menu-item {%- if ActiveMenu == 3 %} c-header__menu-item--active{% endif -%}">Контакты</a>
         </nav>
       </div>
       <div class="c-header__col c-header__col--contacts">

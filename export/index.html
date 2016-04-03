@@ -1,0 +1,466 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="База отдыха которую вы искали">
+  <meta name="keywords" content="база отдыха, бани, аренда домиков Нижневартовск">
+  <meta name="format-detection" content="telephone=no">
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Мира Строй</title>
+
+
+  <link rel="stylesheet" href="./stylesheets/style.css">
+  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.2.min.js"></script>
+  <script src="https://api-maps.yandex.ru/2.0/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+  <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <div class="l-page l-page--main">
+    <header class="c-header c-header--main">
+      <div class="l-container">
+        <div class="c-header__row">
+          <div class="c-header__col c-header__col--logobox">
+            <a href="/" class="c-header__logo">
+              <img src="./images/logo.png" alt="">
+            </a>
+          </div>
+          <div class="c-header__col c-header__col--menu">
+            <nav class="c-header__menu">
+              <a href="/offer" class="c-header__menu-item">Наши Услуги</a>
+              <a href="/media" class="c-header__menu-item">Галерея</a>
+              <a href="/articles" class="c-header__menu-item">Статьи</a>
+              <a href="/contacts" class="c-header__menu-item">Контакты</a>
+            </nav>
+          </div>
+          <div class="c-header__col c-header__col--contacts">
+            <div class="c-header__contacts">
+              <a href="mailto: info@ck-mira.ru" class="c-header__email"><i class="c-icon c-icon--envelop"></i>info@ck-mira.ru</a>
+              <a href="tel: +73433835135" class="c-header__tel">8 (343) <b>38 35 135</b></a>
+            </div>
+          </div>
+        </div>
+        <div class="c-header__bird-box">
+          <div class="c-header__bird"></div>
+          <div class="c-header__cloud"></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="c-slider">
+      <div class="c-slider__item" style="background-image: url(./uploads/slider-1.jpg)">
+        <div class="l-container">
+          <div class="c-slider__inner">
+            <div class="c-slider__inner-content">
+              <div class="c-slider__title">Малоэтажное строительство
+                <br>от идеи до результата.</div>
+              <div class="c-slider__text">Реализуем проекты любой стадии готовности,
+                <br>точно в срок</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-slider__item" style="background-image: url(./uploads/slider-2.jpg)">
+        <div class="l-container">
+          <div class="c-slider__inner">
+            <div class="c-slider__inner-content">
+              <div class="c-slider__title">Системы вентиляции</div>
+              <div class="c-slider__text">Приточно-вытяжные установки
+                <br>с рекуперацией тепла для загородного дома.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="c-slider__item" style="background-image: url(./uploads/slider-1.jpg)">
+        <div class="l-container">
+          <div class="c-slider__inner">
+            <div class="c-slider__inner-content">
+              <div class="c-slider__title">Малоэтажное строительство
+                <br>от идеи до результата.</div>
+              <div class="c-slider__text">Приточно-вытяжные установки
+                <br>с рекуперацией тепла для загородного дома.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="c-wtf">
+      <div class="c-wtf__top">
+        <div class="l-container">
+          <h2 class="c-h2 c-wtf__top-title">Наши услуги:</h2>
+          <div class="c-wtf__menu">
+            <a href="#" class="c-wtf__menu-item" data-slide="0">Эскизный и&nbsp;архитектурный&nbsp;проекты</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="1">Рабочее проектирование</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="2">Строительные работы</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="3">Наружные сети</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="4">Водоснабжение и канализация</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="5">Отопление</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="6">Вентилляция</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="7">Электромонтажные работы</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="8">Отделочные работы</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="9">Благоустройство</a>
+
+            <a href="#" class="c-wtf__menu-item" data-slide="10">Реконструкция</a>
+          </div>
+        </div>
+      </div>
+      <div class="c-wtf__slider">
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Эскизный и&nbsp;архитектурный&nbsp;проекты</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать проектирование</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Рабочее проектирование</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать проектирование</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Строительные работы</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Наружные сети</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Водоснабжение и канализация</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Отопление</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Вентилляция</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Электромонтажные работы</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Отделочные работы</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Благоустройство</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать благоустройство</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="c-wtf__slider-item">
+          <div class="l-container">
+            <div class="c-wtf__row">
+              <div class="c-wtf__content">
+                <div class="c-wtf__title">Реконструкция</div>
+                <div class="c-wtf__info">Проектирование коттеджей и загородных домов любой сложности. При разработке проекта коттеджа определяются строительные материалы, способы возведения и инженерные коммуникации.</div>
+                <div class="c-wtf__text">Наше архитектурное решение включает разработку планировок интерьеров помещений. Предлагаются несколько вариантов расстановки внутри и посадки на участок. На основе эскизного архитектурного проекта ведется разработка инженерных частей,
+                  ландшафтный дизайн участка.</div>
+                <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
+              </div>
+              <div class="c-wtf__control">
+                <a href="#" class="c-btn c-btn--white">Заказать реконструкцию</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="c-steps__section">
+      <h2 class="c-h2">Как мы работаем</h2>
+      <div class="l-container">
+        <ul class="c-steps">
+          <li class="c-steps__item">
+            <div class="c-steps__icon">1</div>
+            <div class="c-steps__text">Мы с вами определяем
+              <br>задачу и объем работ</div>
+          </li>
+          <li class="c-steps__item">
+            <div class="c-steps__icon">2</div>
+            <div class="c-steps__text">Составляем
+              <br>вам предложение</div>
+          </li>
+          <li class="c-steps__item">
+            <div class="c-steps__icon">3</div>
+            <div class="c-steps__text">Согласовываем сроки
+              <br>и планы</div>
+          </li>
+          <li class="c-steps__item">
+            <div class="c-steps__icon">4</div>
+            <div class="c-steps__text">Подписываем
+              <br><a href="#">договор</a>
+              <br>
+              <span class="c-steps__info">Скачать, 230 kb</span>
+            </div>
+          </li>
+          <li class="c-steps__item">
+            <div class="c-steps__icon">5</div>
+            <div class="c-steps__text">Немедленно
+              <br>начинаем работы!</div>
+          </li>
+        </ul>
+        <a href="#" class="c-btn c-btn--blue">Подать заявку</a>
+      </div>
+    </div>
+    <section class="c-map__section">
+      <div class="c-map__back">
+        <div id="yamap"></div>
+      </div>
+      <div class="c-map__block">
+        <img class="c-map__logo" src="./images/map-logo.png" alt="">
+        <div class="c-map__brand">
+          Строительная компания
+          <br> <strong>МИРА Строй</strong>
+        </div>
+        <div class="c-map__text">
+          620154, Екатеринбург,
+          <br>Шевелева, 7, офис 21
+        </div>
+        <a href="tel: +73433835135" class="c-header__tel u-mb30">8 (343) <b>38 35 135</b></a>
+        <a href="mailto: info@ck-mira.ru" class="c-header__email u-mb30"><i class="c-icon c-icon--envelop"></i>info@ck-mira.ru</a>
+        <a href="#" class="c-map__toggler">Написать сообщение</a>
+
+        <div class="c-map__form-wrapper">
+          <a href="#" class="c-map__form-close"><i class="c-icon c-icon--map-close"></i></a>
+          <form action="/" method="POST" class="c-map__form">
+            <div class="c-map__form-title">Написать сообщение</div>
+            <div class="c-map__form-row">
+              <input type="text" name="name" class="c-map__form-control" required placeholder="Пожалуйста представьтесь">
+            </div>
+            <div class="c-map__form-row">
+              <input type="text" name="contacts" class="c-map__form-control" required placeholder="Ваш Телефон / Email">
+            </div>
+            <div class="c-map__form-row">
+              <textarea name="msg" class="c-map__form-control c-map__form-area" placeholder="Ваше сообщение"></textarea>
+            </div>
+
+            <div class="c-map__form-row">
+              <div class="c-map__file">
+                <input id="mapFormFile" name="file" type="file">
+                <label for="mapFormFile"><i class="c-icon c-icon--file"></i>Приложить файл..</label>
+              </div>
+              <button type="submit" class="c-map__form-btn">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="c-section">
+      <div class="l-container">
+        <h2 class="c-h2">Наши статьи о строительстве</h2>
+        <div class="c-articles">
+          <div class="c-articles__item">
+            <a href="/articles/vent" class="c-articles__title"><span>Фундамент за 2 дня</span></a>
+            <span class="c-articles__tag">Строительство</span>
+            <div class="c-articles__imgbox">
+              <img src="./uploads/article1.jpg" class="c-articles__img" alt="Фундамент за 2 дня">
+            </div>
+            <div class="c-articles__text">Фундамент и цоколь больше других частей здания «ощущает на себе» влияние природных факторов. А так как мы хотим, чтобы Ваш дом стоял веками, нужно тщательно подготовить его основание к заморозкам, уберечь от промерзания, обеспечить надежную
+              гидроизоляцию.</div>
+          </div>
+
+          <div class="c-articles__item">
+            <a href="/articles/vent" class="c-articles__title"><span>Берегите тепло</span></a>
+            <span class="c-articles__tag">Отопление</span>
+            <div class="c-articles__imgbox">
+              <img src="./uploads/article2.jpg" class="c-articles__img" alt="Берегите тепло">
+            </div>
+            <div class="c-articles__text">Монтаж отопления и водоснабжения на строительных объектах различного назначения играет важную роль в создании полноценных систем жизнеобеспечения. Гарантией надлежащего функционирования готовых инженерных коммуникаций выступает качественное
+              выполнение работ.</div>
+          </div>
+
+          <div class="c-articles__item">
+            <a href="/articles/vent" class="c-articles__title"><span>Кровля, это одеяло дома</span></a>
+            <span class="c-articles__tag">Строительные работы</span>
+            <div class="c-articles__imgbox">
+              <img src="./uploads/article3.jpg" class="c-articles__img" alt="Кровля, это одеяло дома">
+            </div>
+            <div class="c-articles__text">Кровля должна быть водонепроницаемой, что обеспечивается правильной конструк- цией кровли, качеством кровельных материалов, соответствовать противопожар- ным нормам, надежно отводить атмосферные воды, быть долговечной и доступной для ремонта,
+              очистки от снега.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="c-footer">
+      <div class="l-container c-footer__container">
+        <div class="c-footer__row">
+          <div class="c-footer__col c-footer__col--1">
+            <div class="c-footer__logo">
+              <img src="./images/footer-logo.png" alt="">
+            </div>
+          </div>
+          <div class="c-footer__col c-footer__col--2">
+            <div class="c-footer__label">Строительная компания «Мира»</div>
+            <div class="c-footer__menu">
+              <a class="c-footer__menu-item" href="/offer">Наши услуги</a>
+              <a class="c-footer__menu-item" href="/media">Медиа</a>
+              <a class="c-footer__menu-item" href="/contacts">Контакты</a>
+              <a class="c-footer__menu-item" href="/articles">Статьи</a>
+              <a class="c-footer__menu-item" href="/vacancy">Вакансии</a>
+            </div>
+          </div>
+
+          <div class="c-footer__col c-footer__col--3">
+            <div class="c-footer__label">Екатеринбург, Шевелева, 7</div>
+            <a href="tel: +73433835135" class="c-tel c-footer__tel">8 (343) <strong>38 35 135</strong></a>&ensp;<a class="c-footer__email" href="mailto: info@ck-mira.ru">info@ck-mira.ru</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- assets -->
+    <script src="./javascripts/libs.js"></script>
+    <script src="./javascripts/general.js"></script>
+
+  </div>
+</body>
+
+</html>

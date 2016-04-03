@@ -1,0 +1,35 @@
+<section class="c-map__section">
+	<div class="c-map__back">
+		<div id="yamap"></div>
+	</div>
+	<div class="c-map__form-wrapper c-map__form-wrapper--contacts">
+		<form action="/" method="POST" class="c-map__form">
+			<div class="c-map__form-title">Написать сообщение</div>
+			<div class="c-map__form-row">
+				<input type="text" name="name" class="c-map__form-control" required placeholder="Пожалуйста представьтесь">
+			</div>
+			<div class="c-map__form-row">
+				<input type="text" name="contacts" class="c-map__form-control" required placeholder="Ваш Телефон / Email">
+			</div>
+			<div class="c-map__form-row">
+				<select name="" id="" name="contacts" placeholder="asasa" class="c-map__form-control">
+					<option>Выберите услугу</option>
+					<option value="1">Услуга 1</option>
+					<option value="2">Услуга 2</option>
+					<option value="3">Услуга 3</option>
+				</select>
+			</div>
+			<div class="c-map__form-row">
+				<textarea name="msg" class="c-map__form-control c-map__form-area" placeholder="Ваше сообщение"></textarea>
+			</div>
+
+			<div class="c-map__form-row">
+				<div class="c-map__file">
+					<input id="mapFormFile" name="file" type="file">
+					<label for="mapFormFile"><i class="c-icon c-icon--file"></i>Приложить файл..</label>
+				</div>
+				<button type="submit" class="c-map__form-btn">Отправить</button>
+			</div>
+		</form>
+	</div>
+</section>

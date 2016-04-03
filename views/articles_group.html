@@ -44,7 +44,7 @@
 			<a class="c-posts" href="/articles/vent/{{ loop.index }}">
 				<div class="c-posts__title">{{ post.title }}</div>
 				<div class="c-posts__imgbox">
-					<img class="c-posts__img" src="/uploads/{{ post.img }}" alt="">
+					<img class="c-posts__img" src="{{ STATIC }}/uploads/{{ post.img }}" alt="">
 				</div>
 				<div class="c-posts__text">{{ post.text|safe }}</div>
 			</a>

@@ -17,7 +17,7 @@
 
             myPlacemark = new ymaps.Placemark([56.843417, 60.575493], {}, {
               iconLayout: 'default#image',
-              iconImageHref: '/images/map-pin.png',
+              iconImageHref: './images/map-pin.png',
               iconImageSize: [165, 55],
               // Смещение левого верхнего угла иконки относительно
               // её "ножки" (точки привязки).
@@ -123,7 +123,7 @@
       galleryPrevArrow.className = 'c-gallery__arrow c-gallery__arrow--prev';
       galleryView.innerHtml = '<div class="c-gallery__view-inner"></div>';
       gallery.id = id;
-      galleryLoader.src = '/images/loader.gif';
+      galleryLoader.src = './images/loader.gif';
       galleryLoader.className = 'c-gallery__loader';
       link.setAttribute('href', data.btnUrl);
       link.innerHTML = data.btnText;
@@ -274,7 +274,7 @@
     },
 
     openGallery: function(id, active) {
-      var source = '/uploads/' + id + '.json';
+      var source = './uploads/' + id + '.json';
       $.getJSON(source, function(data) {
         miraApp.gallery(id, data, active)
       });

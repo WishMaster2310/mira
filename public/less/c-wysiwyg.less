@@ -10,11 +10,77 @@
 		}
 	}
 
+	a {
+		text-decoration: none;
+		color: @blue;
+	}
+
 	img {
 		max-width: 100%;
 	}
 
 	iframe {
 		.remMb(15);
+	}
+
+	h4 {
+		.fontSizer(21);
+		.remMb(20);
+		.remMt(20);
+	}
+
+	h1 {
+		.fontSizer(36);
+		.remMb(20);
+		.remMt(20);	
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	h3 {
+		.fontSizer(24);
+		.remMb(20);
+		.remMt(20);	
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+
+	h2 {
+		.fontSizer(26);
+		.remMb(20);
+		.remMt(20);	
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	ul {
+		list-style-type: none;
+		margin: 0;
+
+		li {
+			//padding-left: 1em;
+			position: relative;
+			.remMb(20);
+			.remMt(20);
+
+			&::before {
+				width: 6px;
+				height: 6px;
+				content: "";
+				display: block;
+				position: absolute;
+				left: -15px;
+				background-color: @blue;
+				top: .6em;
+				
+			}
+		}
 	}
 }

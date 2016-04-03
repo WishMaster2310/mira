@@ -5,47 +5,57 @@
   "items": [{
     "type": "img",
     "caption": "Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs1.jpg",
-    "src": "/uploads/2540937.jpg"
+    "thumbs": "./uploads/gal1_min.jpg",
+    "src": "./uploads/gal1.jpg"
   }, {
     "type": "img",
     "caption": "Вот так будет выглядеть длинный текст помещенный в этот блок, у текста появится троеточие",
-    "thumbs": "/uploads/thumbs2.jpg",
-    "src": "/uploads/img0025.jpg"
+    "thumbs": "./uploads/gal2_min.jpg",
+    "src": "./uploads/gal2.jpg"
   }, {
     "type": "img",
     "caption": "3Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs3.jpg",
-    "src": "/uploads/imageswewewewewewe.jpg"
+    "thumbs": "./uploads/gal3_min.jpg",
+    "src": "./uploads/gal3.jpg"
   }, {
     "type": "img",
     "caption": "4Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs4.jpg",
-    "src": "/uploads/Vnutrennyaya-otdelka-v-Penze.jpg"
+    "thumbs": "./uploads/gal4_min.jpg",
+    "src": "./uploads/gal4.jpg"
   }, {
     "type": "img",
     "caption": "5Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs1.jpg",
-    "src": "/uploads/05c87c79f8f89ed6f142ed5f53b63b38.jpg"
+    "thumbs": "./uploads/gal5_min.jpg",
+    "src": "./uploads/gal5.jpg"
   }, {
     "type": "img",
     "caption": "6Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs2.jpg",
-    "src": "/uploads/dc59aa_6b04d4cfc4ef4e41997a21473fe671d5.jpg"
+    "thumbs": "./uploads/gal6_min.jpg",
+    "src": "./uploads/gal6.jpg"
   }, {
     "type": "img",
     "caption": "7Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs3.jpg",
-    "src": "/uploads/images12132323.jpg"
+    "thumbs": "./uploads/gal7_min.jpg",
+    "src": "./uploads/gal7.jpg"
   }, {
     "type": "img",
     "caption": "8Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs4.jpg",
-    "src": "/uploads/images12132323.jpg"
+    "thumbs": "./uploads/gal8_min.jpg",
+    "src": "./uploads/gal8.jpg"
   }, {
     "type": "video",
     "caption": "8Очень короткий текстовый блок",
-    "thumbs": "/uploads/thumbs4.jpg",
+    "thumbs": "./uploads/gal9_min.jpg",
     "src": "https://www.youtube.com/embed/jBEOSU-BvHQ"
+  }, {
+    "type": "img",
+    "caption": "8Очень короткий текстовый блок",
+    "thumbs": "./uploads/gal10_min.jpg",
+    "src": "./uploads/gal10.jpg"
+  }, {
+    "type": "img",
+    "caption": "8Очень короткий текстовый блок",
+    "thumbs": "./uploads/gal11_min.jpg",
+    "src": "./uploads/gal11.jpg"
   }]
 }

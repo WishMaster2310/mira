@@ -27,7 +27,7 @@
 				<a href="/articles/vent" class="c-articles__title"><span>{{ item.title }}</span></a>
 				<span class="c-articles__tag">{{ item.tag }}</span>
 				<div class="c-articles__imgbox">
-					<img src="/uploads/{{ item.img }}" class="c-articles__img" alt="{{ item.title }}">
+					<img src="{{ STATIC }}/uploads/{{ item.img }}" class="c-articles__img" alt="{{ item.title }}">
 				</div>
 				<div class="c-articles__text">{{ item.desc|safe }}</div>
 			</div>

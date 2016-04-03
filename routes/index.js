@@ -7,22 +7,29 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/articles', function(req, res, next) {
-  res.render('articles', {});
+  res.render('articles', {"ActiveMenu": 2});
 });
 
 router.get('/articles/:group', function(req, res, next) {
-  res.render('articles_group', {});
+  res.render('articles_group', {"ActiveMenu": 2});
 });
 
 router.get('/articles/:group/:id', function(req, res, next) {
-  res.render('article_item', {});
+  res.render('article_item', {"ActiveMenu": 2});
 });
 
 router.get('/media', function(req, res, next) {
-  res.render('media', {});
+  res.render('media', {"ActiveMenu": 1});
 });
 
 router.get('/offer', function(req, res, next) {
-  res.render('offer', {});
+  res.render('offer', {"ActiveMenu": 0});
+});
+
+router.get('/contacts', function(req, res, next) {
+  res.render('contacts', {"ActiveMenu": 3});
+});
+router.get('/vacancy', function(req, res, next) {
+  res.render('vacancy', {});
 });
 module.exports = router;

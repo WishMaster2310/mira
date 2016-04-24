@@ -1,0 +1,41 @@
+.c-form {
+	&__control {
+		width: 100%;
+		border: 1px solid #cccccc;
+		outline: none;
+		background-color: #fff;
+		color: #000;
+		height: 40px;
+		padding: 0 10px;
+		font-family: inherit;
+		font-size: 14px;
+		transition: border .3s;
+
+		&:focus {
+			border-color: @blue;
+		}
+
+		&--area {
+			padding-top: 10px;
+			padding-bottom: 10px;
+			height: 96px;
+		}     
+	}
+
+	&__file {
+		display: inline-block;
+		overflow: hidden;
+		cursor: pointer;
+		color: @blue;
+		font-size: 12px;
+		padding: 12px 0 12px 20px;
+		line-height: 1;
+		background: url(/images/file-sm-blue.png) no-repeat left 50%;
+
+		input {
+			visibility: hidden;
+			position: absolute;
+			left: -99em;
+		}
+	}
+}

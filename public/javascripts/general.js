@@ -1,4 +1,4 @@
-! function() {
+!function() {
   var miraApp = {
     initMapBlock: function() {
       if ($('.c-map__back').length > 0) {
@@ -129,6 +129,14 @@
       link.innerHTML = data.btnText;
       link.className = 'c-gallery-link';
 
+
+      link.onclick = function(e) {
+        e.preventDefault();
+        vex.close();
+        setTimeout(function() {
+          miraApp.modalForm()
+        }, 1000)
+      }
 			
 
       for (var i = 0; i < data.items.length; i++) {
@@ -278,6 +286,21 @@
       $.getJSON(source, function(data) {
         miraApp.gallery(id, data, active)
       });
+    },
+    modalForm: function(opt) {
+      $('#miraModalForm').arcticmodal({
+        overlay: {
+          css: {
+            backgroundColor: '#031d2a',
+            opacity: .9
+          }
+        },
+        beforeOpen: function() {
+          if (opt) {
+            $('#miraModalFormServices').val(opt)
+          }
+        }
+      })
     }
   }
 
@@ -289,6 +312,15 @@
       var gID = $(this).attr('data-gid');
       var gActive = $(this).attr('data-gactive');
       miraApp.openGallery(gID, gActive);
-    })
+    });
+
+    $('.j-modalform').on('click', function(e) {
+        e.preventDefault();
+        if ($(this).attr('data-opt')) {
+          miraApp.modalForm($(this).attr('data-opt'))
+        } else {
+          miraApp.modalForm()
+        }
+    });
   });
 }()

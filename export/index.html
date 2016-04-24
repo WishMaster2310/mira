@@ -133,7 +133,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать проектирование</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="1">Заказать проектирование</a>
               </div>
             </div>
           </div>
@@ -150,7 +150,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать проектирование</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="2">Заказать проектирование</a>
               </div>
             </div>
           </div>
@@ -167,7 +167,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="3">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -184,7 +184,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="4">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -201,7 +201,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="5">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -218,7 +218,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="6">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -235,7 +235,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="7">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -252,7 +252,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="8">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -269,7 +269,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать работы</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="9">Заказать работы</a>
               </div>
             </div>
           </div>
@@ -286,7 +286,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать благоустройство</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="10">Заказать благоустройство</a>
               </div>
             </div>
           </div>
@@ -303,7 +303,7 @@
                 <a href="#" class="c-wtf__more">Подробнее о проектировании</a>
               </div>
               <div class="c-wtf__control">
-                <a href="#" class="c-btn c-btn--white">Заказать реконструкцию</a>
+                <a href="#" class="c-btn c-btn--white j-modalform" data-opt="11">Заказать реконструкцию</a>
               </div>
             </div>
           </div>
@@ -461,6 +461,66 @@
     <script src="./javascripts/general.js"></script>
 
   </div>
+  <!-- modal form  -->
+  <div style="display: none">
+    <div class="c-modal" id="miraModalForm">
+      <div class="c-modal__close" onclick="$.arcticmodal('close')"></div>
+      <div class="c-modal__content">
+        <form class="c-modal-form c-form u-mb20" action="#">
+          <div class="l-row u-mb30">
+            <div class="l-col">
+              <img class="u-mb10" src="/images/gallery-logo.png" alt="">
+              <h2 class="c-h2 u-mb10">Заказ услуги</h2>
+              <select id="miraModalFormServices" name="service" class="c-form__control">
+                <option>Выберите услугу</option>
+                <option value="1">Эскизный и&nbsp;архитектурный&nbsp;проекты</option>
+                <option value="2">Рабочее проектирование</option>
+                <option value="3">Строительные работы</option>
+                <option value="4">Наружные сети</option>
+                <option value="5">Водоснабжение и канализация</option>
+                <option value="6">Отопление</option>
+                <option value="7">Вентилляция</option>
+                <option value="8">Электромонтажные работы</option>
+                <option value="9">Отделочные работы</option>
+                <option value="10">Благоустройство</option>
+                <option value="11">Реконструкция</option>
+              </select>
+            </div>
+          </div>
+          <div class="l-row u-mb10">
+            <div class="l-col">
+              <input type="text" name="name" required class="c-form__control u-mb20" placeholder="Пожалуйста, представьтесь">
+              <div class="l-row">
+                <div class="l-col">
+                  <input type="tel" name="tel" required class="c-form__control" placeholder="Ваш телефон">
+                </div>
+                <div class="l-col">
+                  <input type="email" name="email" class="c-form__control" placeholder="Ваш Email">
+                </div>
+              </div>
+            </div>
+            <div class="l-col">
+              <textarea class="c-form__control c-form__control--area" name="msg" placeholder="Опишите задание (необязательно)"></textarea>
+            </div>
+          </div>
+          <div class="u-mb20 u-text-right">
+            <label class="c-form__file">
+              <span class="c-form__file-label">Приложить файл..</span>
+              <input type="file" class="c-form__file-input" name="file">
+            </label>
+          </div>
+          <div>
+            <button type="submit" class="c-btn c-btn--blue c-btn--noleft">Заказать Услугу</button>
+          </div>
+        </form>
+        <div class="c-modal__info">Мы свяжемся с вами в самый короткий срок!</div>
+      </div>
+    </div>
+  </div>
+  <!-- end modal form  -->
+
+
+
 </body>
 
 </html>

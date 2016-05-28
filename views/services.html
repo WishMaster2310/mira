@@ -1,0 +1,33 @@
+{%- extends "./layouts/main.html" -%}
+{%- set services = 
+[{
+	"title": "Проектирование",
+	"cover": "media-cover1.jpg"
+},
+{
+	"title": "Строительство",
+	"cover": "media-cover2.jpg"
+},
+{
+	"title": "Отделочные работы",
+	"cover": "media-cover3.jpg"
+}] -%}
+
+{%- block content -%}
+<div class="l-inner">
+	<div class="c-media">
+	{%- for item in services %}
+		<a href="offer"  class="c-media__item">
+			<div class="c-media__inner">
+				<div class="c-media__img">
+					<img src="{{ STATIC }}/uploads/{{ item.cover }}" alt="">
+				</div>
+			</div>
+			<div class="c-media__title">{{ item.title|safe }}</div>
+		</a>
+	{% endfor -%}
+	</div>
+</div>
+{% include "components/map3.html" %}
+{%- endblock %}
+{%- block pageScripts %}{% endblock -%}

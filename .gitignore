@@ -2,3 +2,4 @@ __design/*
 __package/*
 node_modules/*
 *.sublime-workspace
+.DS_Store

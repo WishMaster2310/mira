@@ -24,6 +24,13 @@
               iconImageOffset: [-86, -65]
             });
 
+          // Также в метод add можно передать экземпляр класса элемента управления.
+          // Например, панель управления пробками.
+          var trafficControl = new ymaps.control.TrafficControl();
+          myMap.controls
+              .add('zoomControl', { right: 5, top: 7 })
+              .add(trafficControl, { right: 35, top: 5 });
+
           myMap.geoObjects.add(myPlacemark);
         }
 
@@ -84,7 +91,9 @@
         $('.c-slider').slick({
           dots: false,
           nextArrow: '<div class="c-slider__arrow c-slider__arrow--next"></div>',
-          prevArrow: '<div class="c-slider__arrow c-slider__arrow--prev"></div>'
+          prevArrow: '<div class="c-slider__arrow c-slider__arrow--prev"></div>',
+          autoplay: true,
+          autoplaySpeed: 5000
         });
       }
     },
@@ -321,6 +330,14 @@
         } else {
           miraApp.modalForm()
         }
+    });
+  });
+
+  $(function() {
+    $('input[type=file]').on('change', function(){
+      var self = $(this);
+      var pathName = self.val().split("\\").pop();
+      self.closest(".c-map__file").find(".c-map__file-name").text(pathName);
     });
   });
 }()

@@ -1,0 +1,30 @@
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+select::-ms-expand {
+  display: none;
+}
+.c-select{
+	display: inline-block;
+	background: #fff;
+	position: relative;
+
+	select{
+		background: none;
+		padding-right: 25px !important;
+		position: relative;
+	}
+
+	&::before{
+		content: "";
+		position: absolute;
+		border-top: 6px solid @blue;
+		border-left: 4px solid transparent;
+		border-right: 4px solid transparent;
+		top: 17px;
+		right: 15px;
+	}
+}

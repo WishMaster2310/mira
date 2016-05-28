@@ -11,6 +11,18 @@
 		padding: 40px 20px;
 		height: 380px;
 		position: relative;
+
+		&--with-services{
+			height: 435px;
+
+			.c-map__brand{
+				margin-bottom: 80px;
+			}
+
+			.c-header__email{
+				margin-top: 50px;
+			}
+		}
 	}
 
 	&__block--active &__form-wrapper {
@@ -205,6 +217,10 @@
 			}
 			
 		}
+
+		.c-select{
+			width: 100%;
+		}
 	}
 
 	&__file {
@@ -244,6 +260,13 @@
 			position: absolute;
 			visibility: hidden;
 			left: -999em;
+		}
+
+		&-name{
+			display: block;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
 		}
 	}
 }

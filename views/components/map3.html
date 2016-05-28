@@ -2,7 +2,7 @@
 	<div class="c-map__back">
 		<div id="yamap"></div>
 	</div>
-	<div class="c-map__block">
+	<div class="c-map__block c-map__block--with-services">
 		<img class="c-map__logo" src="{{ STATIC }}/images/map-logo.png" alt="">
 		<div class="c-map__brand">
 			Строительная компания <br> <strong>МИРА Строй</strong>
@@ -23,6 +23,16 @@
 				</div>
 				<div class="c-map__form-row">
 					<input type="text" name="contacts" class="c-map__form-control" required placeholder="Ваш Телефон / Email">
+				</div>
+				<div class="c-map__form-row">
+					<div class="c-select">
+						<select  id="" name="contacts" class="c-map__form-control">
+							<option>Выберите услугу</option>
+							<option value="1">Услуга 1</option>
+							<option value="2">Услуга 2</option>
+							<option value="3">Услуга 3</option>
+						</select>
+					</div>
 				</div>
 				<div class="c-map__form-row">
 					<textarea name="msg" class="c-map__form-control c-map__form-area" placeholder="Ваше сообщение"></textarea>

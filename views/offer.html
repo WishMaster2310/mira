@@ -1,7 +1,30 @@
 {%- set bodyClass = 'main' -%}
+{%- set steps = 
+[{
+	"number": "1",
+	"text": "Мы ознакамливаемся <br>с проектом"
+},
+{
+	"number": "2",
+	"text": "Составляем предложение, со&nbsp;сметой и сроками"
+},
+{
+	"number": "3",
+	"text": "Составляем и подписываем договор"
+},
+{
+	"number": "4",
+	"text": "Начинаем работы, <br>после предоплаты"
+}] -%}
+{%- set file = 
+{ 
+	"name": "Скачать типовой договор на&nbsp;проектировку и&nbsp;оснащение вентилляции",
+	"link": "#"
+} -%}
 {%- extends "./layouts/main.html" -%}
 {%- block content -%}
 {% include "components/slider.html" %}
+
 <div class="l-container u-mt30">
 	<div class="l-row">
 		<div class="l-col l-col--2of3">
@@ -20,24 +43,14 @@
 				</div>
 				<h3 class="c-h3">Порядок работы:</h3>
 				<div class="c-smallsteps u-mb60">
-					<div class="c-smallsteps__item">
-						<div class="c-smallsteps__icon">1</div>
-						<div class="c-smallsteps__text">Мы ознакамливаемся <br>с проектом</div>
-					</div>
-					<div class="c-smallsteps__item">
-						<div class="c-smallsteps__icon">2</div>
-						<div class="c-smallsteps__text">Составляем предложение, со&nbsp;сметой и сроками</div>
-					</div>
-					<div class="c-smallsteps__item">
-						<div class="c-smallsteps__icon">3</div>
-						<div class="c-smallsteps__text">Составляем и подписываем <a href="#">договор</a></div>
-					</div>
-					<div class="c-smallsteps__item">
-						<div class="c-smallsteps__icon">4</div>
-						<div class="c-smallsteps__text">Начинаем работы, <br>после предоплаты</div>
-					</div>
+					{%- for item in steps %}
+						<div class="c-smallsteps__item">
+							<div class="c-smallsteps__icon">{{ item.number }}</div>
+							<div class="c-smallsteps__text">{{ item.text|safe }}</div>
+						</div>
+					{% endfor -%}
 				</div>
-				<a class="c-file" href="#">Скачать типовой договор на&nbsp;проектировку и&nbsp;оснащение вентилляции <span>*doc, 215 kb</span>
+				<a class="c-file" href="{{file.link}}">{{ file.name | safe }} <span>*doc, 215 kb</span>
 				</a>
 			</div>
 		</div>

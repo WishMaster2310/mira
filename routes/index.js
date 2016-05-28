@@ -22,6 +22,10 @@ router.get('/media', function(req, res, next) {
   res.render('media', {"ActiveMenu": 1});
 });
 
+router.get('/services', function(req, res, next) {
+  res.render('services', {"ActiveMenu": 0});
+});
+
 router.get('/offer', function(req, res, next) {
   res.render('offer', {"ActiveMenu": 0});
 });

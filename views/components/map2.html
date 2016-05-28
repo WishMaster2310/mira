@@ -12,12 +12,14 @@
 				<input type="text" name="contacts" class="c-map__form-control" required placeholder="Ваш Телефон / Email">
 			</div>
 			<div class="c-map__form-row">
-				<select  id="" name="contacts" class="c-map__form-control">
-					<option>Выберите услугу</option>
-					<option value="1">Услуга 1</option>
-					<option value="2">Услуга 2</option>
-					<option value="3">Услуга 3</option>
-				</select>
+				<div class="c-select">
+					<select  id="" name="contacts" class="c-map__form-control">
+						<option>Выберите услугу</option>
+						<option value="1">Услуга 1</option>
+						<option value="2">Услуга 2</option>
+						<option value="3">Услуга 3</option>
+					</select>
+				</div>
 			</div>
 			<div class="c-map__form-row">
 				<textarea name="msg" class="c-map__form-control c-map__form-area" placeholder="Ваше сообщение"></textarea>
@@ -26,7 +28,7 @@
 			<div class="c-map__form-row">
 				<div class="c-map__file">
 					<input id="mapFormFile" name="file" type="file">
-					<label for="mapFormFile"><i class="c-icon c-icon--file"></i>Приложить файл..</label>
+					<label for="mapFormFile"><i class="c-icon c-icon--file"></i><span class="c-map__file-name">Приложить файл..</span></label>
 				</div>
 				<button type="submit" class="c-map__form-btn">Отправить</button>
 			</div>

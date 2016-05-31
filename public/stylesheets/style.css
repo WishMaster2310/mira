@@ -1435,7 +1435,7 @@ body.vex-open {
   visibility: hidden;
   left: -999em;
 }
-.c-map__file-name {
+.c-map__file .js-file-name {
   display: block;
   overflow: hidden;
   white-space: nowrap;
@@ -1457,7 +1457,7 @@ body.vex-open {
   height: 14px;
 }
 .c-calline {
-  background-color: #1d8ee2;
+  background: #228ede url(../images/calline.jpg) center;
   color: #fff;
 }
 .c-calline__row {
@@ -2100,6 +2100,12 @@ select::-ms-expand {
   left: 100%;
   cursor: pointer;
   background: url('../images/close-popover.png') no-repeat center center;
+}
+.c-modal .js-file-name {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 .c-form__control {
   width: 100%;

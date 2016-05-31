@@ -93,7 +93,8 @@
           nextArrow: '<div class="c-slider__arrow c-slider__arrow--next"></div>',
           prevArrow: '<div class="c-slider__arrow c-slider__arrow--prev"></div>',
           autoplay: true,
-          autoplaySpeed: 5000
+          autoplaySpeed: 5000,
+          rtl: true
         });
       }
     },
@@ -337,7 +338,7 @@
     $('input[type=file]').on('change', function(){
       var self = $(this);
       var pathName = self.val().split("\\").pop();
-      self.closest(".c-map__file").find(".c-map__file-name").text(pathName);
+      self.closest(".js-file").find(".js-file-name").text(pathName);
     });
   });
 }()

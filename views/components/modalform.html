@@ -9,12 +9,14 @@
                     <div class="l-col">
                         <img class="u-mb10" src="{{ STATIC }}/images/gallery-logo.png" alt="">
                         <h2 class="c-h2 u-mb10">Заказ услуги</h2>
-                        <select id="miraModalFormServices" name="service" class="c-form__control">
-                            <option>Выберите услугу</option>
-                            {%- for opt in Opts  %}
-                             <option value="{{ loop.index }}">{{ opt.title|safe }}</option> 
-                            {%- endfor %}
-                        </select>
+                        <div class="c-select">
+                            <select id="miraModalFormServices" name="service" class="c-form__control">
+                                <option>Выберите услугу</option>
+                                {%- for opt in Opts  %}
+                                 <option value="{{ loop.index }}">{{ opt.title|safe }}</option> 
+                                {%- endfor %}
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="l-row u-mb10">
@@ -34,8 +36,8 @@
                     </div>
                 </div>
                 <div class="u-mb20 u-text-right">
-                    <label class="c-form__file">
-                        <span class="c-form__file-label">Приложить файл..</span>
+                    <label class="c-form__file js-file">
+                        <span class="c-form__file-label js-file-name">Приложить файл..</span>
                         <input type="file" class="c-form__file-input" name="file">
                     </label>
                 </div>

@@ -94,6 +94,7 @@
           prevArrow: '<div class="c-slider__arrow c-slider__arrow--prev"></div>',
           autoplay: true,
           autoplaySpeed: 5000,
+          pauseOnHover: false,
           rtl: true
         });
       }
@@ -298,7 +299,8 @@
       });
     },
     modalForm: function(opt) {
-      $('#miraModalForm').arcticmodal({
+      // $('#miraModalForm').arcticmodal({
+      $('#miraSuccessModalForm').arcticmodal({
         overlay: {
           css: {
             backgroundColor: '#031d2a',

@@ -94,8 +94,7 @@
           prevArrow: '<div class="c-slider__arrow c-slider__arrow--prev"></div>',
           autoplay: true,
           autoplaySpeed: 5000,
-          pauseOnHover: false,
-          rtl: true
+          pauseOnHover: false
         });
       }
     },
